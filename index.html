@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Quiz — Атака Титанів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <svg class="bg-cracks" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <polyline points="0,200 180,320 140,400 310,520 280,700" stroke="rgba(139,26,26,0.15)" stroke-width="1.5" fill="none"/>
+        <polyline points="1440,100 1260,250 1300,380 1100,470 1150,680" stroke="rgba(139,26,26,0.1)" stroke-width="1" fill="none"/>
+        <polyline points="700,0 680,160 720,240 690,450" stroke="rgba(201,168,76,0.07)" stroke-width="1" fill="none"/>
+    </svg>
+ 
+    <div class="app-container">
+ 
+        <!-- START -->
+        <div id="start-screen" class="screen">
+            <div class="corner tl"></div><div class="corner tr"></div>
+            <div class="corner bl"></div><div class="corner br"></div>
+            <div class="accent-bar"></div>
+            <div class="emblem">⚔️</div>
+            <p class="corps-tag">— РОЗВІДКОВА БРИГАДА —</p>
+            <h1 class="main-title">Attack On Titans<br><em>quiz</em></h1>
+            <p class="subtitle">Перевір свої знання про Атаку Титанів</p>
+            <div class="divider"><span></span><b>✦</b><span></span></div>
+            <button id="start-btn">Вступити до битви</button>
+            <p class="tagline">"Битися. Битися. Битися."</p>
+        </div>
+ 
+        <!-- QUIZ -->
+        <div id="quiz-screen" class="screen hide">
+            <div class="corner tl"></div><div class="corner tr"></div>
+            <div class="corner bl"></div><div class="corner br"></div>
+ 
+            <div class="quiz-header">
+                <div class="hstat">
+                    <span class="hlabel">ЧАС</span>
+                    <span id="timer" class="hval">15</span>
+                </div>
+                <span id="q-counter" class="q-counter">01 / 08</span>
+                <div class="hstat right">
+                    <span class="hlabel">ОЧКИ</span>
+                    <span id="score-display" class="hval">0</span>
+                </div>
+            </div>
+ 
+            <div class="tbar-wrap"><div id="timer-bar" class="tbar"></div></div>
+ 
+            <div class="q-area">
+                <p class="q-label">ЗАПИТАННЯ</p>
+                <h2 id="question-text">…</h2>
+            </div>
+ 
+            <div id="answers-container"></div>
+        </div>
+ 
+        <!-- RESULT -->
+        <div id="result-screen" class="screen hide">
+            <div class="corner tl"></div><div class="corner tr"></div>
+            <div class="corner bl"></div><div class="corner br"></div>
+            <div class="accent-bar"></div>
+            <div class="emblem" id="result-emblem">🏆</div>
+            <p class="corps-tag">— ПІДСУМОК МІСІЇ —</p>
+            <h1 class="main-title" id="result-rank">РАНГ</h1>
+            <p class="result-score" id="result-score">0 / 8</p>
+            <p class="result-text" id="result-text"></p>
+            <div class="divider"><span></span><b>✦</b><span></span></div>
+            <button id="restart-btn">Нова місія</button>
+        </div>
+ 
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
